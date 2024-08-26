@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background:)',
+        background: 'var(--background)',
         foreground: 'var(--foreground)',
         focus: 'var(--focus)',
         'primary-50': 'var(--primary-50)',
@@ -27,6 +27,30 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui({
+    themes: {   //the color values must be the same of the ./scr/app/styles/variables.scss
+      "modern": {
+        extend: "dark",
+        colors: {
+          background: "#ffffff",
+          foreground: "#000000",
+          focus: "#F182F6",
+          primary: {
+            50: "#f3f6ef",
+            100: "#e5eadd",
+            200: "#cdd8be",
+            300: "#acbf97",
+            400: "#8ea675",
+            500: "#78925d",
+            600: "#586d43",
+            700: "#455536",
+            800: "#39452f",
+            900: "#323c2b",
+            DEFAULT: "#78925d"
+          },
+        }
+      }
+    }
+  })],
 }
 

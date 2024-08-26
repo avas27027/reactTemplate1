@@ -1,8 +1,141 @@
-@keyframes ping1 {
-    from {
-        transform: scale(1);
+@keyframes expand {
+    0% {
+        height: 100vh;
     }
-    to {
-        transform: scale(1.5);
+
+    90% {
+        height: 100vh;
+    }
+}
+
+.landing-container {
+    animation: expand 1s linear;
+    overflow: hidden;
+    width: 200vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.path-container {
+    width: 100vw;
+    padding-top: 450px;
+
+    .title {
+        font-size: 3rem;
+    }
+}
+
+.path-box {
+    min-height: 200vh;
+    z-index: 1;
+
+    .path-first {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            margin-left: 20vw;
+            width: 30rem;
+            text-align: center;
+        }
+    }
+
+    .path-second {
+        display: flex;
+        height: 100vh;
+
+        .title {
+            margin-top: 20vh;
+        }
+    }
+
+    .path-third {
+        height: 100vh;
+        display: flex;
+        justify-content: end;
+
+        .title {
+            margin-top: 20vh;
+        }
+    }
+}
+
+.hero-container {
+    width: 100vw;
+
+    .circle {
+        position: relative;
+        left: 50%;
+        bottom: 70%;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+        border-radius: 100%;
+    }
+
+    .title.main {
+        color: white;
+        position: relative;
+        text-align: center;
+        bottom: 63%;
+        mix-blend-mode: difference;
+        font-size: 6rem;
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.path-fourth {
+    display: flex;
+    justify-content: space-around;
+
+    .design {
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        .color {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+
+.path-fifth {
+    margin-top: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.prices {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+
+    .prices-box {
+        backdrop-filter: blur(10);
+        height: 80vh;
+        width: 25vw;
+        border-radius: 10%;
+        background: rgb(124, 124, 124);
+        background: linear-gradient(180deg, rgba(124, 124, 124, 0.20) 0%, rgba(99, 99, 99, 0.70) 100%);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        h2{
+            font-size: 1.5rem;
+        }
     }
 }
